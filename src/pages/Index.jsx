@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Container, Heading, VStack, Input, Button, Text, useToast, Image } from "@chakra-ui/react";
 import ChatHistory from "../components/ChatHistory";
+import BackendFunctions from "../components/BackendFunctions";
 import { FaRobot, FaServer, FaTasks, FaPlusCircle } from "react-icons/fa";
 
 const Index = () => {
@@ -25,14 +26,15 @@ const Index = () => {
         </Heading>
         <Text fontSize="lg">Your personal AI is ready to help you manage tasks and provide information.</Text>
         <ChatHistory />
-        <Box w="100%">
+        <BackendFunctions />
+        <Box w="100%" mt={6}>
           <Image src="https://images.unsplash.com/photo-1612066473428-fb6833a0d855?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxhaSUyMGFzc2lzdGFudHxlbnwwfHx8fDE3MDY0MTQzNTJ8MA&ixlib=rb-4.0.3&q=80&w=1080" borderRadius="md" mb={4} />
           <Input placeholder="Ask your AI assistant a question or give a task..." mb={4} />
           <Button leftIcon={<FaRobot />} colorScheme="teal" variant="solid" onClick={handleTaskSubmission}>
             Send to AI
           </Button>
         </Box>
-        <Box w="100%">
+        <Box w="100%" mt={6}>
           <Heading as="h2" size="lg" mb={2}>
             Server Status
           </Heading>
