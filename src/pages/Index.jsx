@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Container, Heading, VStack, Input, Button, Text, useToast, Image } from "@chakra-ui/react";
 import ChatHistory from "../components/ChatHistory";
 import BackendFunctions from "../components/BackendFunctions";
+import AIInformation from "../components/AIInformation"; // New import for AI information component
 import { FaRobot, FaServer, FaTasks, FaPlusCircle } from "react-icons/fa";
 
 const Index = () => {
@@ -34,6 +35,7 @@ const Index = () => {
             Send to AI
           </Button>
         </Box>
+        <AIInformation />
         <Box w="100%" mt={6}>
           <Heading as="h2" size="lg" mb={2}>
             Server Status
