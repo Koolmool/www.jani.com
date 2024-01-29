@@ -4,7 +4,8 @@ import ChatHistory from "../components/ChatHistory";
 import BackendFunctions from "../components/BackendFunctions";
 import AIInformation from "../components/AIInformation"; // New import for AI information component
 import { FaRobot, FaServer, FaTasks, FaPlusCircle } from "react-icons/fa";
-import AICodeGenerator from "../components/AICodeGenerator"; // Import AICodeGenerator component
+import AICodeGenerator from "../components/AICodeGenerator";
+import ServerRequirements from "../components/ServerRequirements"; // Import ServerRequirements component
 import BackendChangeRequest from "../components/BackendChangeRequest";
 
 const Index = () => {
@@ -45,7 +46,8 @@ const Index = () => {
         </Box>
         <AIInformation />
         <BackendChangeRequest onBackendChange={(change) => setAiResponses([...aiResponses, { id: aiResponses.length + 1, text: `Backend change processed: ${change}` }])} />
-        <AICodeGenerator />
+        <AICodeGenerator onCodeGenerated={(code) => setAiResponses([...aiResponses, { id: aiResponses.length + 1, text: code }])} />
+        <ServerRequirements />
         <Box w="100%" mt={6}>
           <Heading as="h2" size="lg" mb={2}>
             Server Status
