@@ -7,6 +7,7 @@ import { FaRobot, FaServer, FaTasks, FaPlusCircle } from "react-icons/fa";
 import AICodeGenerator from "../components/AICodeGenerator";
 import ServerRequirements from "../components/ServerRequirements"; // Import ServerRequirements component
 import BackendChangeRequest from "../components/BackendChangeRequest";
+import WebFunctionality from "../components/WebFunctionality"; // Import the new WebFunctionality component
 
 const Index = () => {
   const [userQuery, setUserQuery] = useState("");
@@ -48,6 +49,7 @@ const Index = () => {
         <BackendChangeRequest onBackendChange={(change) => setAiResponses([...aiResponses, { id: aiResponses.length + 1, text: `Backend change processed: ${change}` }])} />
         <AICodeGenerator onCodeGenerated={(code) => setAiResponses([...aiResponses, { id: aiResponses.length + 1, text: code }])} />
         <ServerRequirements />
+        <WebFunctionality /> {/* Add the new WebFunctionality component to the render method */}
         <Box w="100%" mt={6}>
           <Heading as="h2" size="lg" mb={2}>
             Server Status
